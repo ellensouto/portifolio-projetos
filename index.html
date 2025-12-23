@@ -24,12 +24,10 @@
   <link href="assets/css/main.css" rel="stylesheet">
 
   <style>
-    /* CORREÇÃO DO PERFIL */
-  .hero-avatar {
-      /* Garante que a foto fique centralizada na coluna dela */
-      margin: 0 auto; 
+    /* --- 1. FOTO DE PERFIL (HERO) --- */
+    .hero-avatar {
+      margin: 0 auto;
       display: block;
-      /* Seus tamanhos fixos */
       width: 350px !important;
       height: 350px !important;
       object-fit: cover !important;
@@ -37,28 +35,27 @@
       border: 6px solid rgba(255, 255, 255, 0.15);
     }
 
+    /* --- 2. TEXTO E TÍTULOS --- */
     .hero-text-container {
       width: 100%;
-      text-align: center !important; /* Força o texto a ficar no meio */
-    }
-    
-    /* Ajuste para telas grandes (PC) */
-    @media (min-width: 992px) {
-       .hero-text-container {
-          /* Se quiser que no PC o texto fique um pouco separado da foto, use padding */
-          padding-left: 0; 
-       }
+      text-align: center !important; /* Centraliza no Mobile e Desktop */
     }
 
- 
     .hero-title {
-      font-size: 4rem; 
-      font-weight: 700; 
+      font-size: 4rem;
+      font-weight: 700;
       margin-bottom: 10px;
       line-height: 1;
     }
 
-    /* Estilo das Skills */
+    /* Ajuste Fino para Desktop (Telas Grandes) */
+    @media (min-width: 992px) {
+      .hero-text-container {
+        padding-left: 0;
+      }
+    }
+
+    /* --- 3. ESTILO DAS SKILLS (RESUME) --- */
     .skill-tag {
       background: #f3f5f7;
       padding: 8px 15px;
@@ -70,11 +67,13 @@
       color: #333;
       transition: 0.3s;
     }
+
     .skill-tag:hover {
       background: #0078ff;
       color: white;
       transform: translateY(-2px);
     }
+
     .skill-category h5 {
       margin-top: 25px;
       color: #0078ff;
@@ -82,15 +81,15 @@
       font-size: 1.1rem;
     }
 
-    /* AJUSTE PARA CELULAR (Telas menores que 992px) */
+    /* --- 4. AJUSTES PARA CELULAR (Mobile) --- */
     @media (max-width: 992px) {
       .hero-content {
-        text-align: center; /* No celular, centraliza o texto */
+        text-align: center;
         padding-left: 0;
         margin-top: 30px;
       }
       .hero-avatar {
-        width: 220px !important; /* Diminui um pouco a foto no celular */
+        width: 220px !important; /* Foto menor no celular */
         height: 220px !important;
       }
       .hero-title {
@@ -128,30 +127,33 @@
     <section id="hero" class="hero section dark-background">
       <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
 
-<div class="container" data-aos="fade-up" data-aos-delay="100">
-        
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row align-items-center justify-content-center">
-          
+
           <div class="col-lg-5 text-center">
             <img src="assets/img/profile-img.jpg" alt="Ellen Souto" class="hero-avatar">
           </div>
 
-          <div class="col-lg-7"> 
-            <div class="hero-text-container text-center"> <h2 style="font-size: 3.5rem; font-weight: 700; margin-bottom: 15px; line-height: 1;">
+          <div class="col-lg-7">
+            <div class="hero-text-container text-center">
+              
+              <h2 style="font-size: 3.5rem; font-weight: 700; margin-bottom: 15px; line-height: 1;">
                 Ellen Souto
               </h2>
-              
+
               <p style="font-size: 1.5rem;">
                 I am <span class="typed" data-typed-items="a Data Scientist, a Statistician, a Python Developer, a Data Analyst"></span>
                 <span class="typed-cursor typed-cursor--blink" aria-hidden="true">|</span>
               </p>
-              
+
             </div>
           </div>
 
         </div>
       </div>
-    </section><section id="about" class="about section">
+    </section>
+
+    <section id="about" class="about section">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-4">
 
@@ -180,7 +182,9 @@
 
         </div>
       </div>
-    </section><section id="resume" class="resume section">
+    </section>
+
+    <section id="resume" class="resume section">
 
       <div class="container section-title" data-aos="fade-up">
         <h2>Resume</h2>
@@ -188,10 +192,10 @@
       </div>
 
       <div class="container">
-
         <div class="row">
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            
             <h3 class="resume-title">Objective</h3>
             <div class="resume-item pb-0">
               <h4>Junior Data Scientist</h4>
@@ -207,36 +211,38 @@
             </div>
 
             <h3 class="resume-title">Skills & Tech Stack</h3>
-            <div class="skill-category">
-                <h5>Statistics & Mathematics</h5>
-                <div>
-                    <span class="skill-tag">GLM (Generalized Linear Models)</span>
-                    <span class="skill-tag">Markov Chains</span>
-                    <span class="skill-tag">Monte Carlo Simulation</span>
-                    <span class="skill-tag">Bootstrap Methods</span>
-                    <span class="skill-tag">Regression Analysis</span>
-                    <span class="skill-tag">Hypothesis Testing</span>
-                </div>
-            </div>
             
             <div class="skill-category">
-                <h5>Programming & Tools</h5>
-                <div>
-                    <span class="skill-tag">Python (Pandas, Scikit-Learn)</span>
-                    <span class="skill-tag">R Language</span>
-                    <span class="skill-tag">SQL</span>
-                    <span class="skill-tag">Django Framework</span>
-                    <span class="skill-tag">Power BI</span>
-                    <span class="skill-tag">Git / GitHub</span>
-                    <span class="skill-tag">Docker</span>
-                    <span class="skill-tag">AWS (Basic)</span>
-                </div>
+              <h5>Statistics & Mathematics</h5>
+              <div>
+                <span class="skill-tag">GLM (Generalized Linear Models)</span>
+                <span class="skill-tag">Markov Chains</span>
+                <span class="skill-tag">Monte Carlo Simulation</span>
+                <span class="skill-tag">Bootstrap Methods</span>
+                <span class="skill-tag">Regression Analysis</span>
+                <span class="skill-tag">Hypothesis Testing</span>
+              </div>
             </div>
+
+            <div class="skill-category">
+              <h5>Programming & Tools</h5>
+              <div>
+                <span class="skill-tag">Python (Pandas, Scikit-Learn)</span>
+                <span class="skill-tag">R Language</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">Django Framework</span>
+                <span class="skill-tag">Power BI</span>
+                <span class="skill-tag">Git / GitHub</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">AWS (Basic)</span>
+              </div>
             </div>
+
+          </div>
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <h3 class="resume-title">Professional Experience</h3>
-            
+
             <div class="resume-item">
               <h4>Data Analyst Intern</h4>
               <h5>April 2024 - Present</h5>
@@ -262,7 +268,9 @@
           </div>
         </div>
       </div>
-    </section><section id="portfolio" class="portfolio section">
+    </section>
+
+    <section id="portfolio" class="portfolio section">
 
       <div class="container section-title" data-aos="fade-up">
         <h2>Project Portfolio</h2>
@@ -270,7 +278,6 @@
       </div>
 
       <div class="container">
-
         <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
           <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
@@ -362,9 +369,12 @@
               </div>
             </div>
 
-          </div></div>
+          </div>
+        </div>
       </div>
-    </section><section id="contact" class="contact section">
+    </section>
+
+    <section id="contact" class="contact section">
       <div class="container section-title" data-aos="fade-up">
         <h2>Contact Me</h2>
         <p>Let's discuss how I can help your team.</p>
@@ -372,6 +382,7 @@
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-4">
+
           <div class="col-lg-4">
             <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
               <i class="bi bi-linkedin"></i>
@@ -379,13 +390,16 @@
                 <h3>LinkedIn</h3>
                 <p>Connect with me professionally</p>
               </div>
-            </div><div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+            </div>
+            
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
               <i class="bi bi-envelope"></i>
               <div>
                 <h3>Email</h3>
                 <p>ellensoutoestatista@gmail.com</p>
               </div>
-            </div></div>
+            </div>
+          </div>
 
           <div class="col-lg-8">
             <form action="https://formspree.io/f/xlgrznrq" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
@@ -408,6 +422,7 @@
               </div>
             </form>
           </div>
+
         </div>
       </div>
     </section>
