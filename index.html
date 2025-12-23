@@ -82,17 +82,24 @@
       font-size: 1.1rem;
     }
 
-    /* --- 4. AJUSTES PARA CELULAR (Mobile) --- */
-   @media (max-width: 992px) {
-      .hero-content {
-        margin-top: 30px;
-      }
+    /* --- 4. CELULAR (TELA PEQUENA) --- */
+    @media (max-width: 991px) {
+      /* Ajuste da Foto no Celular */
       .hero-avatar {
         width: 220px !important;
         height: 220px !important;
+        margin-bottom: 20px !important; /* Dá um espaço embaixo da foto */
       }
+
+      /* Ajuste do Texto no Celular */
+      .hero-text-container {
+        /* Aqui forçamos o texto a descer para não bater na foto */
+        margin-top: 30px !important; 
+        padding-top: 0 !important;
+      }
+
       .hero-title {
-        font-size: 3rem;
+        font-size: 2.5rem; /* Fonte um pouco menor para não quebrar */
       }
     }
   </style>
