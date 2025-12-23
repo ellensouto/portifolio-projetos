@@ -25,25 +25,32 @@
 
   <style>
     /* CORREÇÃO DO PERFIL */
-    .hero-avatar {
-      width: 350px !important;       /* O !important impede que o template estique a foto */
-      height: 350px !important;      /* Garante que a altura seja igual a largura */
-      max-width: 350px !important;   /* Trava de segurança extra */
-      object-fit: cover !important;  /* Garante que a foto não fique distorcida (corta o excesso) */
-      border-radius: 50%;            /* Deixa redonda */
-      border: 6px solid rgba(255, 255, 255, 0.15); 
-      box-shadow: 0px 0px 30px rgba(0,0,0,0.6);
-      margin: 0 auto;                /* Centraliza a imagem no container dela */
+  .hero-avatar {
+      /* Garante que a foto fique centralizada na coluna dela */
+      margin: 0 auto; 
       display: block;
+      /* Seus tamanhos fixos */
+      width: 350px !important;
+      height: 350px !important;
+      object-fit: cover !important;
+      border-radius: 50%;
+      border: 6px solid rgba(255, 255, 255, 0.15);
     }
 
-    /* Ajustes do Texto e Layout */
-    .hero-content, .hero-text-container {
-      text-align: center !important; /* Centraliza o texto */
-      padding-left: 0 !important;    /* Remove a margem da esquerda para ficar bem no meio */
-      width: 100%;                   /* Garante que o container use todo o espaço disponível */
+    .hero-text-container {
+      width: 100%;
+      text-align: center !important; /* Força o texto a ficar no meio */
+    }
+    
+    /* Ajuste para telas grandes (PC) */
+    @media (min-width: 992px) {
+       .hero-text-container {
+          /* Se quiser que no PC o texto fique um pouco separado da foto, use padding */
+          padding-left: 0; 
+       }
     }
 
+ 
     .hero-title {
       font-size: 4rem; 
       font-weight: 700; 
