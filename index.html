@@ -24,15 +24,22 @@
   <link href="assets/css/main.css" rel="stylesheet">
 
   <style>
+    /* AQUI VOCÊ AJUSTA O TAMANHO DA FOTO */
     .hero-avatar {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      border: 4px solid #fff;
-      object-fit: cover;
-      margin-bottom: 20px;
-      box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+      width: 300px;  /* Largura */
+      height: 300px; /* Altura */
+      border-radius: 50%; /* Deixa redonda */
+      border: 5px solid rgba(255, 255, 255, 0.2); /* Borda sutil */
+      object-fit: cover; /* Garante que a foto não estique */
+      box-shadow: 0px 0px 30px rgba(0,0,0,0.5); /* Sombra elegante */
     }
+
+    /* Estilo para alinhar texto à esquerda dentro da coluna direita */
+    .hero-text-container {
+      text-align: left;
+    }
+
+    /* Estilo das Tags de Skills */
     .skill-tag {
       background: #f3f5f7;
       padding: 8px 15px;
@@ -42,11 +49,30 @@
       font-size: 14px;
       font-weight: 500;
       color: #333;
+      transition: 0.3s;
+    }
+    .skill-tag:hover {
+      background: #0078ff;
+      color: white;
+      transform: translateY(-2px);
     }
     .skill-category h5 {
-      margin-top: 20px;
+      margin-top: 25px;
       color: #0078ff;
       font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    /* Ajuste para celular (Centralizar tudo quando a tela for pequena) */
+    @media (max-width: 768px) {
+      .hero-text-container {
+        text-align: center;
+        margin-top: 20px;
+      }
+      .hero-avatar {
+        width: 200px;
+        height: 200px;
+      }
     }
   </style>
 </head>
@@ -79,12 +105,21 @@
     <section id="hero" class="hero section dark-background">
       <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
 
-      <div class="container d-flex flex-column align-items-center justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
-        
-        <img src="assets/img/profile-img.jpg" alt="Ellen Souto" class="hero-avatar">
-        
-        <h2>Ellen Souto</h2>
-        <p><span class="typed" data-typed-items="Data Scientist, Statistician, Python Developer, Data Analyst"></span></p>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row align-items-center justify-content-center">
+          
+          <div class="col-lg-5 text-center text-lg-end">
+            <img src="assets/img/profile-img.jpg" alt="Ellen Souto" class="hero-avatar">
+          </div>
+
+          <div class="col-lg-7">
+            <div class="hero-text-container">
+              <h2 style="font-size: 3.5rem; font-weight: 700;">Ellen Souto</h2>
+              <p style="font-size: 1.5rem;">I am <span class="typed" data-typed-items="a Data Scientist, a Statistician, a Python Developer, a Data Analyst"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true">|</span></p>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section><section id="about" class="about section">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -94,10 +129,10 @@
             <div class="about-me">
               <h4>About me</h4>
               <p>
-                I am a Statistics undergraduate with 2 years of hands-on experience in data analysis, actively transitioning into Data Science. My passion lies in transforming raw, complex datasets into actionable insights and interactive solutions.
+                I am a Statistics undergraduate with 2 years of hands-on experience in data analysis, actively transitioning into Data Science. My passion lies in transforming raw, complex datasets into actionable insights through rigorous statistical modeling and interactive solutions.
               </p>
               <p>
-                My expertise covers the full data lifecycle: from cleaning and ETL using <strong>Python (Pandas)</strong> and SQL, to statistical modeling (GLM, Regression) and web application development with <strong>Django</strong>. I am comfortable working with cloud environments (AWS), containerization (Docker), and visualizing results for non-technical stakeholders.
+                My expertise covers the full data lifecycle: from cleaning and ETL using <strong>Python (Pandas)</strong> and SQL, to advanced statistical modeling (GLM, Markov Chains, Monte Carlo) and web application development with <strong>Django</strong>. I am comfortable working with cloud environments (AWS), containerization (Docker), and presenting results to stakeholders.
               </p>
             </div>
           </div>
@@ -138,7 +173,7 @@
               <h4>Bachelor of Statistics</h4>
               <h5>2022 - Present (Exp. 2027)</h5>
               <p><em>Universidade Estadual de Maringá (UEM), Brazil</em></p>
-              <p>Focus on Probability, Statistical Inference, and Regression Analysis.</p>
+              <p>Focus on Probability, Statistical Inference, Stochastic Processes, and Regression Analysis.</p>
             </div>
 
             <h3 class="resume-title">Skills & Tech Stack</h3>
@@ -146,10 +181,11 @@
                 <h5>Statistics & Mathematics</h5>
                 <div>
                     <span class="skill-tag">GLM (Generalized Linear Models)</span>
+                    <span class="skill-tag">Markov Chains</span>
+                    <span class="skill-tag">Monte Carlo Simulation</span>
+                    <span class="skill-tag">Bootstrap Methods</span>
                     <span class="skill-tag">Regression Analysis</span>
-                    <span class="skill-tag">Statistical Inference</span>
                     <span class="skill-tag">Hypothesis Testing</span>
-                    <span class="skill-tag">Time Series Forecasting</span>
                 </div>
             </div>
             
@@ -200,7 +236,7 @@
 
       <div class="container section-title" data-aos="fade-up">
         <h2>Project Portfolio</h2>
-        <p>Selected works demonstrating Statistical Modeling and Data Science skills.</p>
+        <p>Selected works demonstrating Statistical Modeling, Simulation, and Data Science skills.</p>
       </div>
 
       <div class="container">
@@ -211,7 +247,7 @@
             <li data-filter="*" class="filter-active">All Projects</li>
             <li data-filter=".filter-ds">Data Science & App</li>
             <li data-filter=".filter-stat">Statistical Modelling</li>
-            <li data-filter=".filter-theory">Theory</li>
+            <li data-filter=".filter-theory">Simulation & Theory</li>
           </ul>
 
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
@@ -227,6 +263,26 @@
             </div>
 
             <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-stat">
+              <img src="assets/img/portfolio/books-1.jpg" class="img-fluid" alt="Markov Chain Rain Model">
+              <div class="portfolio-info">
+                <h4>Stochastic Process: Rainfall Model</h4>
+                <p>Markov Chains (Transition Matrix & Stationary Dist.)</p>
+                <a href="assets/img/portfolio/books-1.jpg" title="Modeled rainfall patterns using a 2-state Markov Chain (Rainy/Dry). Found 85% persistence in rainy states." data-gallery="portfolio-gallery-stat" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="#" target="_blank" title="View Project" class="details-link"><i class="bi bi-file-earmark-pdf"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-theory">
+              <img src="assets/img/portfolio/product-1.jpg" class="img-fluid" alt="Monte Carlo Simulation">
+              <div class="portfolio-info">
+                <h4>Monte Carlo & Bootstrap Simulation</h4>
+                <p>Burr Type XII Distribution Analysis</p>
+                <a href="assets/img/portfolio/product-1.jpg" title="Used Monte Carlo to evaluate MLE consistency and Bootstrap to estimate medians for asymmetric datasets (Brazilian Minimum Wage)." data-gallery="portfolio-gallery-theory" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="#" target="_blank" title="View Project" class="details-link"><i class="bi bi-file-earmark-pdf"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-stat">
               <img src="assets/img/portfolio/app-1.jpg" class="img-fluid" alt="Heart Failure Analysis">
               <div class="portfolio-info">
                 <h4>Heart Failure Risk Factors</h4>
@@ -237,41 +293,41 @@
             </div>
 
             <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-stat">
-              <img src="assets/img/portfolio/product-1.jpg" class="img-fluid" alt="Simple Linear Regression">
+              <img src="assets/img/portfolio/branding-1.jpg" class="img-fluid" alt="Simple Linear Regression">
               <div class="portfolio-info">
                 <h4>Old Faithful Geyser Analysis</h4>
                 <p>Simple Linear Regression (R² ≈ 81%)</p>
-                <a href="assets/img/portfolio/product-1.jpg" title="Predicted eruption duration based on waiting time using R." data-gallery="portfolio-gallery-stat" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="assets/img/portfolio/branding-1.jpg" title="Predicted eruption duration based on waiting time using R." data-gallery="portfolio-gallery-stat" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 <a href="#" target="_blank" title="View Project" class="details-link"><i class="bi bi-file-earmark-pdf"></i></a>
               </div>
             </div>
 
             <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-stat">
-              <img src="assets/img/portfolio/branding-1.jpg" class="img-fluid" alt="Multiple Linear Regression">
+              <img src="assets/img/portfolio/branding-2.jpg" class="img-fluid" alt="Multiple Linear Regression">
               <div class="portfolio-info">
-                <h4>Fuel Efficiency Modeling (Mtcars)</h4>
+                <h4>Fuel Efficiency Modeling</h4>
                 <p>Multiple Linear Regression & Multicollinearity</p>
-                <a href="assets/img/portfolio/branding-1.jpg" title="Analysis of manual vs automatic transmission efficiency controlling for HP." data-gallery="portfolio-gallery-stat" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="assets/img/portfolio/branding-2.jpg" title="Analysis of manual vs automatic transmission efficiency." data-gallery="portfolio-gallery-stat" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 <a href="#" target="_blank" title="View Project" class="details-link"><i class="bi bi-file-earmark-pdf"></i></a>
               </div>
             </div>
 
             <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-theory">
-              <img src="assets/img/portfolio/books-1.jpg" class="img-fluid" alt="Spearman Correlation">
+              <img src="assets/img/portfolio/books-2.jpg" class="img-fluid" alt="Spearman Correlation">
               <div class="portfolio-info">
                 <h4>Spearman Rank Correlation</h4>
                 <p>Non-Parametric Statistical Theory</p>
-                <a href="assets/img/portfolio/books-1.jpg" title="Theoretical comparative study: Pearson vs. Spearman coefficients." data-gallery="portfolio-gallery-theory" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="assets/img/portfolio/books-2.jpg" title="Theoretical comparative study: Pearson vs. Spearman coefficients." data-gallery="portfolio-gallery-theory" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 <a href="#" target="_blank" title="View Project" class="details-link"><i class="bi bi-file-earmark-pdf"></i></a>
               </div>
             </div>
 
             <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-ds">
-              <img src="assets/img/portfolio/app-1.jpg" class="img-fluid" alt="Traffic Dashboard App">
+              <img src="assets/img/portfolio/app-2.jpg" class="img-fluid" alt="Traffic Dashboard App">
               <div class="portfolio-info">
                 <h4>Traffic Data Dashboard</h4>
                 <p>Full-stack contribution using Django & PostgreSQL</p>
-                <a href="assets/img/portfolio/app-1.jpg" title="Web Application developed for Government usage" data-gallery="portfolio-gallery-ds" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="assets/img/portfolio/app-2.jpg" title="Web Application developed for Government usage" data-gallery="portfolio-gallery-ds" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 <a href="#" title="Proprietary Project" class="details-link"><i class="bi bi-lock"></i></a>
               </div>
             </div>
