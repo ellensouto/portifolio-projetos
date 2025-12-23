@@ -22,6 +22,33 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    .hero-avatar {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      object-fit: cover;
+      margin-bottom: 20px;
+      box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+    }
+    .skill-tag {
+      background: #f3f5f7;
+      padding: 8px 15px;
+      border-radius: 50px;
+      display: inline-block;
+      margin: 5px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #333;
+    }
+    .skill-category h5 {
+      margin-top: 20px;
+      color: #0078ff;
+      font-weight: 600;
+    }
+  </style>
 </head>
 
 <body class="index-page">
@@ -50,9 +77,12 @@
   <main class="main">
 
     <section id="hero" class="hero section dark-background">
-      <img src="assets/img/hero-img.jpg" alt="Ellen Souto Data Scientist" data-aos="fade-in">
+      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
 
       <div class="container d-flex flex-column align-items-center justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
+        
+        <img src="assets/img/profile-img.jpg" alt="Ellen Souto" class="hero-avatar">
+        
         <h2>Ellen Souto</h2>
         <p><span class="typed" data-typed-items="Data Scientist, Statistician, Python Developer, Data Analyst"></span></p>
       </div>
@@ -64,10 +94,10 @@
             <div class="about-me">
               <h4>About me</h4>
               <p>
-                I am a Statistics undergraduate with 2 years of hands-on experience in data analysis, actively transitioning into Data Science. My passion lies in transforming raw, complex datasets into actionable insights and interactive solutions that drive business decisions.
+                I am a Statistics undergraduate with 2 years of hands-on experience in data analysis, actively transitioning into Data Science. My passion lies in transforming raw, complex datasets into actionable insights and interactive solutions.
               </p>
               <p>
-                My expertise covers the full data lifecycle: from cleaning and ETL using <strong>Python (Pandas)</strong> and SQL, to statistical modeling and web application development with <strong>Django</strong>. I am comfortable working with cloud environments (AWS), containerization (Docker), and visualizing results for non-technical stakeholders.
+                My expertise covers the full data lifecycle: from cleaning and ETL using <strong>Python (Pandas)</strong> and SQL, to statistical modeling (GLM, Regression) and web application development with <strong>Django</strong>. I am comfortable working with cloud environments (AWS), containerization (Docker), and visualizing results for non-technical stakeholders.
               </p>
             </div>
           </div>
@@ -111,14 +141,32 @@
               <p>Focus on Probability, Statistical Inference, and Regression Analysis.</p>
             </div>
 
-            <h3 class="resume-title">Tech Stack</h3>
-            <div class="resume-item">
-                <p><strong>Languages:</strong> Python, R, SQL</p>
-                <p><strong>Tools:</strong> Power BI, Excel (Advanced), Git/GitHub, Docker</p>
-                <p><strong>Libraries:</strong> Pandas, NumPy, Scikit-learn, Django, Matplotlib</p>
-                <p><strong>Cloud/Infra:</strong> AWS (Basic), PostgreSQL</p>
+            <h3 class="resume-title">Skills & Tech Stack</h3>
+            <div class="skill-category">
+                <h5>Statistics & Mathematics</h5>
+                <div>
+                    <span class="skill-tag">GLM (Generalized Linear Models)</span>
+                    <span class="skill-tag">Regression Analysis</span>
+                    <span class="skill-tag">Statistical Inference</span>
+                    <span class="skill-tag">Hypothesis Testing</span>
+                    <span class="skill-tag">Time Series Forecasting</span>
+                </div>
             </div>
-          </div>
+            
+            <div class="skill-category">
+                <h5>Programming & Tools</h5>
+                <div>
+                    <span class="skill-tag">Python (Pandas, Scikit-Learn)</span>
+                    <span class="skill-tag">R Language</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">Django Framework</span>
+                    <span class="skill-tag">Power BI</span>
+                    <span class="skill-tag">Git / GitHub</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">AWS (Basic)</span>
+                </div>
+            </div>
+            </div>
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <h3 class="resume-title">Professional Experience</h3>
@@ -128,8 +176,8 @@
               <h5>April 2024 - Present</h5>
               <p><em>Secretaria de Mobilidade Urbana (SEMOB) - Government</em></p>
               <ul>
-                <li>Developed automated ETL scripts using Python to clean and validate traffic accident data, reducing manual processing time.</li>
-                <li>Collaborated on the back-end development of a web dashboard using Django and PostgreSQL to visualize city traffic KPIs for directors.</li>
+                <li>Spearheaded automated ETL scripts using Python to clean and validate traffic accident data, significantly reducing manual processing time.</li>
+                <li>Collaborated on the back-end development of a web dashboard using Django and PostgreSQL to visualize city traffic KPIs.</li>
                 <li>Conducted exploratory data analysis (EDA) to identify high-risk areas, supporting public safety campaigns.</li>
               </ul>
             </div>
@@ -140,8 +188,8 @@
               <p><em>Iris Pay (Fintech Startup)</em></p>
               <ul>
                 <li>Managed data migration and validation between ERP systems, ensuring 100% data integrity.</li>
-                <li>Handled financial data operations using AWS cloud infrastructure.</li>
-                <li>Optimized spreadsheets and reports for financial tracking.</li>
+                <li>Handled financial data operations using AWS cloud infrastructure basics.</li>
+                <li>Optimized spreadsheets and reports for financial tracking and control.</li>
               </ul>
             </div>
 
@@ -152,7 +200,7 @@
 
       <div class="container section-title" data-aos="fade-up">
         <h2>Project Portfolio</h2>
-        <p>Selected works demonstrating my skills in Data Science and Analysis.</p>
+        <p>Selected works demonstrating Statistical Modeling and Data Science skills.</p>
       </div>
 
       <div class="container">
@@ -161,8 +209,9 @@
 
           <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
             <li data-filter="*" class="filter-active">All Projects</li>
-            <li data-filter=".filter-ds">Data Science</li>
-            <li data-filter=".filter-dev">Web & Engineering</li>
+            <li data-filter=".filter-ds">Data Science & App</li>
+            <li data-filter=".filter-stat">Statistical Modelling</li>
+            <li data-filter=".filter-theory">Theory</li>
           </ul>
 
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
@@ -171,18 +220,58 @@
               <img src="assets/img/portfolio/st.jpg" class="img-fluid" alt="Traffic Forecasting">
               <div class="portfolio-info">
                 <h4>Traffic Fatality Forecasting</h4>
-                <p>Time Series Analysis (ARIMA vs. Exponential Smoothing)</p>
+                <p>Time Series Analysis (ARIMA vs. Exp. Smoothing)</p>
                 <a href="assets/img/portfolio/st.jpg" title="Forecasting Model" data-gallery="portfolio-gallery-ds" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 <a href="https://github.com/ellensouto/predicao-obitos_transito-maringa/tree/main" target="_blank" title="View Code" class="details-link"><i class="bi bi-github"></i></a>
               </div>
             </div>
 
-            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-dev">
+            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-stat">
+              <img src="assets/img/portfolio/app-1.jpg" class="img-fluid" alt="Heart Failure Analysis">
+              <div class="portfolio-info">
+                <h4>Heart Failure Risk Factors</h4>
+                <p>GLM & Logistic Regression (ROC-AUC 0.78)</p>
+                <a href="assets/img/portfolio/app-1.jpg" title="Identified Ejection Fraction as key protective factor using GLM." data-gallery="portfolio-gallery-stat" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="#" target="_blank" title="View Project" class="details-link"><i class="bi bi-file-earmark-pdf"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-stat">
+              <img src="assets/img/portfolio/product-1.jpg" class="img-fluid" alt="Simple Linear Regression">
+              <div class="portfolio-info">
+                <h4>Old Faithful Geyser Analysis</h4>
+                <p>Simple Linear Regression (R² ≈ 81%)</p>
+                <a href="assets/img/portfolio/product-1.jpg" title="Predicted eruption duration based on waiting time using R." data-gallery="portfolio-gallery-stat" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="#" target="_blank" title="View Project" class="details-link"><i class="bi bi-file-earmark-pdf"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-stat">
+              <img src="assets/img/portfolio/branding-1.jpg" class="img-fluid" alt="Multiple Linear Regression">
+              <div class="portfolio-info">
+                <h4>Fuel Efficiency Modeling (Mtcars)</h4>
+                <p>Multiple Linear Regression & Multicollinearity</p>
+                <a href="assets/img/portfolio/branding-1.jpg" title="Analysis of manual vs automatic transmission efficiency controlling for HP." data-gallery="portfolio-gallery-stat" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="#" target="_blank" title="View Project" class="details-link"><i class="bi bi-file-earmark-pdf"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-theory">
+              <img src="assets/img/portfolio/books-1.jpg" class="img-fluid" alt="Spearman Correlation">
+              <div class="portfolio-info">
+                <h4>Spearman Rank Correlation</h4>
+                <p>Non-Parametric Statistical Theory</p>
+                <a href="assets/img/portfolio/books-1.jpg" title="Theoretical comparative study: Pearson vs. Spearman coefficients." data-gallery="portfolio-gallery-theory" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="#" target="_blank" title="View Project" class="details-link"><i class="bi bi-file-earmark-pdf"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-ds">
               <img src="assets/img/portfolio/app-1.jpg" class="img-fluid" alt="Traffic Dashboard App">
               <div class="portfolio-info">
                 <h4>Traffic Data Dashboard</h4>
                 <p>Full-stack contribution using Django & PostgreSQL</p>
-                <a href="assets/img/portfolio/app-1.jpg" title="Web Application" data-gallery="portfolio-gallery-dev" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="assets/img/portfolio/app-1.jpg" title="Web Application developed for Government usage" data-gallery="portfolio-gallery-ds" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 <a href="#" title="Proprietary Project" class="details-link"><i class="bi bi-lock"></i></a>
               </div>
             </div>
