@@ -24,22 +24,33 @@
   <link href="assets/css/main.css" rel="stylesheet">
 
   <style>
-    /* AQUI VOCÊ AJUSTA O TAMANHO DA FOTO */
+    /* CORREÇÃO DO PERFIL */
     .hero-avatar {
-      width: 300px;  /* Largura */
-      height: 300px; /* Altura */
-      border-radius: 50%; /* Deixa redonda */
-      border: 5px solid rgba(255, 255, 255, 0.2); /* Borda sutil */
-      object-fit: cover; /* Garante que a foto não estique */
-      box-shadow: 0px 0px 30px rgba(0,0,0,0.5); /* Sombra elegante */
+      width: 350px !important;       /* O !important impede que o template estique a foto */
+      height: 350px !important;      /* Garante que a altura seja igual a largura */
+      max-width: 350px !important;   /* Trava de segurança extra */
+      object-fit: cover !important;  /* Garante que a foto não fique distorcida (corta o excesso) */
+      border-radius: 50%;            /* Deixa redonda */
+      border: 6px solid rgba(255, 255, 255, 0.15); 
+      box-shadow: 0px 0px 30px rgba(0,0,0,0.6);
+      margin: 0 auto;                /* Centraliza a imagem no container dela */
+      display: block;
     }
 
-    /* Estilo para alinhar texto à esquerda dentro da coluna direita */
-    .hero-text-container {
-      text-align: left;
+    /* Ajustes do Texto e Layout */
+    .hero-content {
+      text-align: left; /* Garante alinhamento à esquerda no PC */
+      padding-left: 20px;
     }
 
-    /* Estilo das Tags de Skills */
+    .hero-title {
+      font-size: 4rem; 
+      font-weight: 700; 
+      margin-bottom: 10px;
+      line-height: 1;
+    }
+
+    /* Estilo das Skills */
     .skill-tag {
       background: #f3f5f7;
       padding: 8px 15px;
@@ -63,15 +74,19 @@
       font-size: 1.1rem;
     }
 
-    /* Ajuste para celular (Centralizar tudo quando a tela for pequena) */
-    @media (max-width: 768px) {
-      .hero-text-container {
-        text-align: center;
-        margin-top: 20px;
+    /* AJUSTE PARA CELULAR (Telas menores que 992px) */
+    @media (max-width: 992px) {
+      .hero-content {
+        text-align: center; /* No celular, centraliza o texto */
+        padding-left: 0;
+        margin-top: 30px;
       }
       .hero-avatar {
-        width: 200px;
-        height: 200px;
+        width: 220px !important; /* Diminui um pouco a foto no celular */
+        height: 220px !important;
+      }
+      .hero-title {
+        font-size: 3rem;
       }
     }
   </style>
